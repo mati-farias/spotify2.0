@@ -1,10 +1,4 @@
-import React from 'react';
-import {
-	HomeIcon,
-	SearchIcon,
-	LibraryIcon,
-	PlusCircleIcon,
-} from '@heroicons/react/outline';
+import { HomeIcon } from "@heroicons/react/outline";
 
 const Sidebar = () => {
 	return (
@@ -12,6 +6,7 @@ const Sidebar = () => {
 			<div>
 				<button>
 					<HomeIcon />
+					asdasdas
 				</button>
 			</div>
 		</div>
