@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Sidebar from "@/components/modules/Sidebar/Sidebar";
-
+import HomePage from "./HomePage";
+import Default from "@/components/layouts/Default/Default";
 export default function Home() {
 	return (
 		<>
@@ -19,15 +19,11 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<h1>Spotify Clone!</h1>
-			<h2 className='text-3xl font-bold underline'>Hello world!</h2>
+			<Default>
+				<HomePage />
+			</Default>
 
-			<main>
-				<Sidebar />
-				{/* Center */}
-			</main>
-
-			<div>{/*Music Player*/}</div>
+			{/* <div>Music Player</div> */}
 		</>
 	);
 }
