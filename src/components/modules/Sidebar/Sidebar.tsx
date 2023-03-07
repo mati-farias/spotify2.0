@@ -1,8 +1,12 @@
 import { HomeIcon } from "@heroicons/react/outline";
 
-const Sidebar = () => {
+type Props = {
+	className?: string;
+};
+
+function Sidebar({ className }: Props) {
 	return (
-		<div>
+		<div className={`${className}`}>
 			<div>
 				<button>
 					<HomeIcon />
@@ -11,6 +15,6 @@ const Sidebar = () => {
 			</div>
 		</div>
 	);
-};
+}
 
 export default Sidebar;
