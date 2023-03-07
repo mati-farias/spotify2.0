@@ -21,6 +21,7 @@ export default function Home() {
 			</Head>
 
 			<h1>Spotify Clone!</h1>
+			<h2 className='text-3xl font-bold underline'>Hello world!</h2>
 
 			<main>
 				<Sidebar />
