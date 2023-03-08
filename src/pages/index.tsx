@@ -1,8 +1,12 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { Inter } from 'next/font/google';
 import HomePage from './HomePage';
 import Default from '@/components/layouts/Default/Default';
+import { SessionProvider } from 'next-auth/react';
+
+type Props = {
+	children: React.ReactNode;
+};
 
 export default function Home() {
 	return (

@@ -3,8 +3,9 @@ import {
 	LibraryIcon,
 	SearchIcon,
 	PlusCircleIcon,
+	HeartIcon,
 } from '@heroicons/react/outline';
-import { HeartIcon, ThumbUpIcon } from '@heroicons/react/solid/';
+import { ThumbUpIcon } from '@heroicons/react/solid/';
 import logoSpotify from '../../../../public/Spotify_Icon_RGB_Green.png';
 import Image from 'next/image';
 type Props = {
@@ -22,64 +23,60 @@ function Sidebar({ className }: Props) {
 						alt='Logo Spotify'
 					/>
 				</div>
-				<h2 className='text-3xl font-bold'>Spotify</h2>
+				<h2 className='text-3xl font-bold text-white'>Spotify</h2>
 			</div>
-			<div className=' w-52'>
-				<div className='flex flex-col items-start w-full'>
-					<button>
-						<div className='flex w-40 items-center'>
-							<div className='m-2'>
-								<HomeIcon className='h-5 w-5' />
-							</div>
-							Home
-						</div>
+			<div className='w-52 text-gray-500 p-5 t-sm border-r border-gray-900'>
+				<div className=' space-y-4'>
+					<button className='flex w-full items-center space-x-2 hover:text-white'>
+						<HomeIcon className='h-5 w-5' />
+						<p>Home</p>
 					</button>
-					<button>
-						<div className='flex w-full items-center'>
-							<div className='m-2'>
-								<SearchIcon className='h-5 w-5' />
-							</div>
-							Search
-						</div>
+					<button className='flex w-full items-center space-x-2 hover:text-white'>
+						<SearchIcon className='h-5 w-5' />
+						<p>Search</p>
 					</button>
-					<button>
-						<div className='flex w-full items-center'>
-							<div className='m-2'>
-								<LibraryIcon className='h-5 w-5' />
-							</div>
-							Your Library
-						</div>
+					<button className='flex w-full items-center space-x-2 hover:text-white'>
+						<LibraryIcon className='h-5 w-5' />
+						<p>Your Library</p>
 					</button>
-					<div className='border-b-[0.2px] border-slate-800 w-full'></div>
+
+					<hr className='border-t-[0.1px] border-gray-900 w-full' />
+
+					<button className='flex w-full items-center space-x-2 hover:text-white'>
+						<PlusCircleIcon className='h-5 w-5' />
+						<p> Create playlist</p>
+					</button>
+					<button className='flex w-full items-center space-x-2 hover:text-white'>
+						<HeartIcon className='h-5 w-5 to-blue-500' />
+						<p>Favorite songs</p>
+					</button>
+					<button className='flex w-full items-center space-x-2 hover:text-white'>
+						<ThumbUpIcon className='h-5 w-5' />
+						<p>Your Episodes</p>
+					</button>
+					<hr className='border-t-[0.1px] border-gray-900 w-full' />
+
+					{/*Playlist*/}
+
+					<p className='cursor-pointer hover:text-white'>
+						Playlist name
+					</p>
+					<p className='cursor-pointer hover:text-white'>
+						Playlist name
+					</p>
+					<p className='cursor-pointer hover:text-white'>
+						Playlist name
+					</p>
+					<p className='cursor-pointer hover:text-white'>
+						Playlist name
+					</p>
+					<p className='cursor-pointer hover:text-white'>
+						Playlist name
+					</p>
+					<p className='cursor-pointer hover:text-white'>
+						Playlist name
+					</p>
 				</div>
-				<div className='flex flex-col items-start w-full'>
-					<button>
-						<div className='flex w-full items-center'>
-							<div className='m-2'>
-								<PlusCircleIcon className='h-5 w-5' />
-							</div>
-							Create playlist
-						</div>
-					</button>
-					<button>
-						<div className='flex w-full items-center'>
-							<div className='m-2'>
-								<HeartIcon className='h-5 w-5' />
-							</div>
-							Favorite songs
-						</div>
-					</button>
-					<button>
-						<div className='flex w-full items-center'>
-							<div className='m-2'>
-								<ThumbUpIcon className='h-5 w-5' />
-							</div>
-							Favorite Episodes
-						</div>
-					</button>
-					<div className='border-b-[0.2px] border-slate-800 w-full'></div>
-				</div>
-				<div>{/*Playlist*/}</div>
 			</div>
 		</div>
 	);
