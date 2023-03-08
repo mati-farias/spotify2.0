@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Gotham-regular';
+    src: local('Gotham-regular'), url(../assets/Gotham/GothamMedium.ttf) format('truetype');
+  }
+@font-face {
+    font-family: 'Gotham-bold';
+    src: local('Gotham-bold'), url(../assets/Gotham/GothamBold.ttf) format('truetype');
+  }
+
+  :root{
+    --ff-Gotham-regular:"Gotham-regular";
+    --ff-Gotham-bold:"Gotham-bold";
+  }
+  p{
+    font-family: var(--ff-Gotham-regular);
+  }
+  h1,h2,h3,h4{
+    font-family: var(--ff-Gotham-bold);;
+  }
