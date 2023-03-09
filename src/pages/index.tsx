@@ -1,14 +1,20 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import HomePage from './HomePage';
-import Default from '@/components/layouts/Default/Default';
-import { SessionProvider } from 'next-auth/react';
+import Head from "next/head";
+import Image from "next/image";
+import HomePage from "./HomePage";
+import Default from "@/components/layouts/Default/Default";
+import { SessionProvider } from "next-auth/react";
+import Login from "./login";
+import { useState, useEffect } from "react";
 
 type Props = {
 	children: React.ReactNode;
 };
 
 export default function Home() {
+	const [isLogged, setIsLogged] = useState<boolean>(false);
+	useEffect(() => {
+		setIsLogged(false);
+	}, [setIsLogged]);
 	return (
 		<>
 			<Head>
@@ -24,9 +30,13 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<Default>
-				<HomePage />
-			</Default>
+			{isLogged ? (
+				<Default>
+					<HomePage />
+				</Default>
+			) : (
+				<Login />
+			)}
 
 			{/* <div>Music Player</div> */}
 		</>
