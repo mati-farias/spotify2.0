@@ -1,8 +1,8 @@
-import type { NextPage } from "next";
-import { signIn, signOut, useSession } from "next-auth/react";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/login.module.css";
+import type { NextPage } from 'next';
+import { signIn, signOut, useSession } from 'next-auth/react';
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/login.module.css';
 
 type Props = {
 	session: {
@@ -28,21 +28,20 @@ function Login({ session }: Props) {
 
 			<main className={styles.main}>
 				<h1 className={styles.title}>
-					Welcome,{" "}
-					{status === "authenticated"
-						? session.data.user?.name || "friend"
-						: "stranger"}
+					Welcome,{' '}
+					{status === 'authenticated'
+						? session.data.user?.name || 'friend'
+						: 'stranger'}
 					!
 				</h1>
 				<p>
-					{session.status !== "authenticated" && (
+					{session.status !== 'authenticated' && (
 						<button
 							className={styles.button}
 							type='button'
-							style={{ "--accent-color": "#15883e" }}
-							onClick={() => signIn("spotify")}
-							disabled={status === "loading"}
-						>
+							style={{ '--accent-color': '#15883e' }}
+							onClick={() => signIn('spotify')}
+							disabled={status === 'loading'}>
 							Sign in with Spotify
 						</button>
 					)}
@@ -58,9 +57,8 @@ function Login({ session }: Props) {
 				<a
 					href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
 					target='_blank'
-					rel='noopener noreferrer'
-				>
-					Powered by{" "}
+					rel='noopener noreferrer'>
+					Powered by{' '}
 					<span className={styles.logo}>
 						<Image
 							src='/vercel.svg'

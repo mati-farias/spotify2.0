@@ -8,11 +8,14 @@ import {
 import { ThumbUpIcon } from '@heroicons/react/solid/';
 import logoSpotify from '../../../../public/Spotify_Icon_RGB_Green.png';
 import Image from 'next/image';
+import { Playlist } from '@/components/PlaylistsList/Playlists';
+
 type Props = {
 	className?: string;
+	playlists: Playlist[];
 };
 
-function Sidebar({ className }: Props) {
+function Sidebar({ playlists, className }: Props) {
 	return (
 		<div className={`${className}`}>
 			<div className='flex items-center w-full'>
@@ -58,24 +61,15 @@ function Sidebar({ className }: Props) {
 
 					{/*Playlist*/}
 
-					<p className='cursor-pointer hover:text-white'>
-						Playlist name
-					</p>
-					<p className='cursor-pointer hover:text-white'>
-						Playlist name
-					</p>
-					<p className='cursor-pointer hover:text-white'>
-						Playlist name
-					</p>
-					<p className='cursor-pointer hover:text-white'>
-						Playlist name
-					</p>
-					<p className='cursor-pointer hover:text-white'>
-						Playlist name
-					</p>
-					<p className='cursor-pointer hover:text-white'>
-						Playlist name
-					</p>
+					{playlists && (
+						<ul>
+							{playlists.map((playlist) => (
+								<li key={playlist.id}>
+									<p>{playlist.name}</p>
+								</li>
+							))}
+						</ul>
+					)}
 				</div>
 			</div>
 		</div>

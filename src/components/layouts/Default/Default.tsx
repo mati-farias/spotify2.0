@@ -1,9 +1,12 @@
 import Footer from '@/components/modules/Footer/Footer';
 import Sidebar from '@/components/modules/Sidebar/Sidebar';
-import { signIn, signOut, useSession } from 'next-auth/react';
+import { Playlist } from '@/components/PlaylistsList/Playlists';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import Playlists from '@/components/PlaylistsList/Playlists';
 
 type Props = {
 	children: React.ReactNode;
+	playlists: Playlist[];
 };
 
 function Default({ children }: Props) {
