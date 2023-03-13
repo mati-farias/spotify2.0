@@ -4,11 +4,12 @@ import {
 	SearchIcon,
 	PlusCircleIcon,
 	HeartIcon,
-} from '@heroicons/react/outline';
-import { ThumbUpIcon } from '@heroicons/react/solid/';
-import logoSpotify from '../../../../public/Spotify_Icon_RGB_Green.png';
-import Image from 'next/image';
-import { Playlist } from '@/components/PlaylistsList/Playlists';
+} from "@heroicons/react/outline";
+import { ThumbUpIcon } from "@heroicons/react/solid/";
+import logoSpotify from "../../../../public/Spotify_Icon_RGB_Green.png";
+import Image from "next/image";
+import { Playlist } from "@/components/PlaylistsList/Playlists";
+import SidebarActionButton from "@/components/elements/SidebarActionButton/sidebarActionButton";
 
 type Props = {
 	className?: string;
@@ -57,6 +58,12 @@ function Sidebar({ playlists, className }: Props) {
 						<ThumbUpIcon className='h-5 w-5' />
 						<p>Your Episodes</p>
 					</button>
+					{/*
+						button
+							leftIcon
+							textButton
+						/button
+					*/}
 					<hr className='border-t-[0.1px] border-gray-900 w-full' />
 
 					{/*Playlist*/}
