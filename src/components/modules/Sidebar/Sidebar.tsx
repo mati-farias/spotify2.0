@@ -31,33 +31,33 @@ function Sidebar({ playlists, className }: Props) {
 			</div>
 			<div className='w-52 text-gray-500 p-5 t-sm border-r border-gray-900'>
 				<div className=' space-y-4'>
-					<button className='flex w-full items-center space-x-2 hover:text-white'>
-						<HomeIcon className='h-5 w-5' />
-						<p>Home</p>
-					</button>
-					<button className='flex w-full items-center space-x-2 hover:text-white'>
-						<SearchIcon className='h-5 w-5' />
-						<p>Search</p>
-					</button>
-					<button className='flex w-full items-center space-x-2 hover:text-white'>
-						<LibraryIcon className='h-5 w-5' />
-						<p>Your Library</p>
-					</button>
+					<SidebarActionButton
+						leftIcon={<HomeIcon className='h-5 w-5' />}
+						labelButton='Home'
+					/>
+					<SidebarActionButton
+						leftIcon={<SearchIcon className='h-5 w-5' />}
+						labelButton='Search'
+					/>
+					<SidebarActionButton
+						leftIcon={<LibraryIcon className='h-5 w-5' />}
+						labelButton='Your Library'
+					/>
 
 					<hr className='border-t-[0.1px] border-gray-900 w-full' />
 
-					<button className='flex w-full items-center space-x-2 hover:text-white'>
-						<PlusCircleIcon className='h-5 w-5' />
-						<p> Create playlist</p>
-					</button>
-					<button className='flex w-full items-center space-x-2 hover:text-white'>
-						<HeartIcon className='h-5 w-5 to-blue-500' />
-						<p>Favorite songs</p>
-					</button>
-					<button className='flex w-full items-center space-x-2 hover:text-white'>
-						<ThumbUpIcon className='h-5 w-5' />
-						<p>Your Episodes</p>
-					</button>
+					<SidebarActionButton
+						leftIcon={<PlusCircleIcon className='h-5 w-5' />}
+						labelButton='Create playlist'
+					/>
+					<SidebarActionButton
+						leftIcon={<HeartIcon className='h-5 w-5 to-blue-500' />}
+						labelButton='Favorite songs'
+					/>
+					<SidebarActionButton
+						leftIcon={<ThumbUpIcon className='h-5 w-5' />}
+						labelButton='Your Episodes'
+					/>
 					{/*
 						button
 							leftIcon
